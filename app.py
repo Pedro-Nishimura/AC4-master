@@ -97,7 +97,7 @@ def excluirTweet(id):
     db.session.commit()
 
     return redirect(url_for('index'))
-    return render_template('tweets.html')
+    return render_template('paginaPrincipal.html')
 
 @app.route('seguirUsuario', methods=['GET, POST'])
 def seguirUsuario():
@@ -106,8 +106,14 @@ def seguirUsuario():
     return redirect(url_for('index'))
     return render_template('paginaPrincipal.html')
 
-@app.route('deixarSeguirUsuario', methods=['GET, POST'])
-def deixarSeguirUsuario
+@app.route('/deixarSeguirUsuario/<int:id>/<int:idS>', methods=['GET, POST'])
+def deixarSeguirUsuario(id, idS):
+    deixarSeguir = Seguidores.query.get(id, idS)
+    db.session.delete(deixarSeguir)
+    db.session.commit()
+
+    return redirect(url_for('index'))
+    return render_template('paginaPrincipal.html')
 
 if __name__ == '__main__':
     db.create_all()
