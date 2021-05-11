@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Twitter</title>
+    <link rel="stylesheet" type= "text/css" href="{{ url_for('static',filename='css/index.css')}}">
+    <link rel="sortcut icon" href="{{ url_for('static',filename='images/logoTt.png')}}" type="images" />;
+</head>
+
+<body class="backGround">
+    <h1>Login</h1>
+
+    <div class="container">
+        <img src="{{ url_for('static',filename='images/logoTt.png')}}">
+    </div>
+    <br>
+    <form action="/login" class="login" method="POST">
+        <div class="usuario" style="text-align: center;">
+            <input class="input" type="text" placeholder="Usuário" value="{{usuario.usuario}}" name="usuario" id="usuario" maxlength="14">
+        </div>
+
+        <div class="senha" style="text-align: center;">
+            <input class="input" type="password" placeholder="Senha" value="{{usuario.senha}}" name="senha" id="senha" maxlength="14">
+        </div>
+        <button class="entrar" type="submit">Entrar</button>
+    </form>
+
+    <a class="esqueceuSenha" href="/esqueceuSenha">Esqueceu sua Senha?</a>
+    <p class="description">Não Tem Conta? <a href="/cadastro">Crie Agora!</a></p>
+</body>
+</html>

@@ -1,0 +1,49 @@
+h1 {
+    color: rgb(0, 162, 255);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.backGround {
+    background-color: rgb(0, 0, 0) !important
+}
+
+.container img {
+    max-width: 100px;
+    max-height: 50px;
+    width: auto;
+    height: auto;
+}
+
+.login{
+	display: flex;
+	flex-direction: column;
+}
+
+.input {
+    text-align: center;
+    padding: 10px;
+	margin: 0 auto;
+	border: none;
+	margin-bottom: 10px;
+	border-radius: 50px;
+}
+
+.entrar {
+	padding: 10px;
+    margin: 0 auto;
+    margin-bottom: 10px;
+	border-radius: 50px;
+	border: none;
+	color: #fff;
+	background: linear-gradient(to right, rgb(0, 162, 255), rgb(154, 223, 255));
+}
+
+.description{
+	color: lightgray;
+	font-size: 13px;
+	margin-top: 50px;
+}
+
+.description a{
+	font-weight: 700;
+}
